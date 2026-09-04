@@ -4,10 +4,10 @@ var
    anos: inteiro
 
 inicio
-   escreva("Digite a população da Cidade A: ")
+   escreva("Digite a populaÃ§Ã£o da Cidade A: ")
    leia(cidadeA)
 
-   escreva("Digite a população da Cidade B: ")
+   escreva("Digite a populaÃ§Ã£o da Cidade B: ")
    leia(cidadeB)
 
    anos <- 0
@@ -18,6 +18,6 @@ inicio
       anos <- anos + 1
    fimenquanto
 
-   escreva("A Cidade A ultrapassará a Cidade B em ", anos, " anos.")
+   escreva("A Cidade A ultrapassarÃ¡ a Cidade B em ", anos, " anos.")
 
 fimalgoritmo
