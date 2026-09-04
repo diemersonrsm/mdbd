@@ -11,7 +11,7 @@ inicio
    reprovados <- 0
 
    para i de 1 ate 20 faca
-      escreva("Digite a média do aluno ", i, ": ")
+      escreva("Digite a mÃ©dia do aluno ", i, ": ")
       leia(media)
 
       se (media >= 7) entao
@@ -30,7 +30,7 @@ inicio
    percRep <- (reprovados * 100) / 20
 
    escreval("Aprovados: ", aprovados, " (", percAprov, "%)")
-   escreval("Recuperação: ", recuperacao, " (", percRec, "%)")
+   escreval("RecuperaÃ§Ã£o: ", recuperacao, " (", percRec, "%)")
    escreval("Reprovados: ", reprovados, " (", percRep, "%)")
 
 fimalgoritmo
