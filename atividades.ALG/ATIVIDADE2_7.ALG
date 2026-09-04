@@ -5,7 +5,7 @@ var
 
 inicio
 
-   escreva("Digite o número da tabuada: ")
+   escreva("Digite o nÃºmero da tabuada: ")
    leia(numero)
 
    escreva("Digite o limite final: ")
