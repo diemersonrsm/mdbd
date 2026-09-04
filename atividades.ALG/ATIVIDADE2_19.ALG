@@ -10,7 +10,7 @@ inicio
    divAmbos <- 0
 
    para i de 1 ate 25 faca
-      escreva("Digite o ", i, "º número: ")
+      escreva("Digite o ", i, "Âº nÃºmero: ")
       leia(numero)
 
       se (numero % 3 = 0) entao
@@ -26,8 +26,8 @@ inicio
       fimse
    fimpara
 
-   escreval("Quantidade divisíveis por 3: ", div3)
-   escreval("Quantidade divisíveis por 5: ", div5)
-   escreval("Quantidade divisíveis por ambos: ", divAmbos)
+   escreval("Quantidade divisÃ­veis por 3: ", div3)
+   escreval("Quantidade divisÃ­veis por 5: ", div5)
+   escreval("Quantidade divisÃ­veis por ambos: ", divAmbos)
 
 fimalgoritmo
