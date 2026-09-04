@@ -15,7 +15,7 @@ inicio
       leia(nota)
 
       enquanto (nota < 0) ou (nota > 10) faca
-         escreva("Nota inv·lida! Digite uma nota entre 0 e 10: ")
+         escreva("Nota inv√°lida! Digite uma nota entre 0 e 10: ")
          leia(nota)
       fimenquanto
 
@@ -25,6 +25,6 @@ inicio
 
    media <- soma / 5
 
-   escreval("A mÈdia das notas È: ", media)
+   escreval("A m√©dia das notas √©: ", media)
 
 fimalgoritmo
