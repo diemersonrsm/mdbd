@@ -30,7 +30,7 @@ inicio
       media <- somaIdades / totalPessoas
       percentualMenores <- (menores * 100) / totalPessoas
 
-      escreval("Média das idades: ", media)
+      escreval("MÃ©dia das idades: ", media)
       escreval("Quantidade de maiores de 18: ", maiores18)
       escreval("Percentual de menores de idade: ", percentualMenores, "%")
    senao
