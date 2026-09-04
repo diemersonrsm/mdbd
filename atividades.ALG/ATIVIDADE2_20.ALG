@@ -16,7 +16,7 @@ inicio
    leia(saque)
 
    enquanto (saque <= 0) faca
-      escreval("Valor inválido! Digite um valor positivo.")
+      escreval("Valor invÃ¡lido! Digite um valor positivo.")
       escreva("Digite o valor do saque: ")
       leia(saque)
    fimenquanto
