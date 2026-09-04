@@ -3,7 +3,7 @@ var
    num, i, cont: inteiro
 
 inicio
-   escreva("Digite um número inteiro maior que 1: ")
+   escreva("Digite um nÃºmero inteiro maior que 1: ")
    leia(num)
 
    cont <- 0
@@ -15,9 +15,9 @@ inicio
    fimpara
 
    se (contador = 2) entao
-      escreva("O número ", num, " é primo.")
+      escreva("O nÃºmero ", num, " Ã© primo.")
    senao
-      escreva("O número ", num, " não é primo.")
+      escreva("O nÃºmero ", num, " nÃ£o Ã© primo.")
    fimse
 
 fimalgoritmo
