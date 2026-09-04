@@ -5,12 +5,12 @@ var
 
 inicio
 
-   escreva("Digite um número inteiro positivo: ")
+   escreva("Digite um nÃºmero inteiro positivo: ")
    leia(numero)
 
 
    enquanto (numero < 0) faca
-      escreva("Número inválido! Digite um número inteiro positivo: ")
+      escreva("NÃºmero invÃ¡lido! Digite um nÃºmero inteiro positivo: ")
       leia(numero)
    fimenquanto
 
@@ -20,5 +20,5 @@ inicio
       fatorial <- fatorial * i
    fimpara
 
-   escreva("O fatorial de ", numero, " é: ", fatorial)
+   escreva("O fatorial de ", numero, " Ã©: ", fatorial)
 Fimalgoritmo
