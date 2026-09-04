@@ -24,7 +24,7 @@ inicio
 
    fimpara
 
-   escreval("Total vendido no período: ", totalVendido)
+   escreval("Total vendido no perÃ­odo: ", totalVendido)
    escreval("Maior venda foi no dia ", diaMaiorVenda, " com ", maiorVenda, " unidades.")
 
 fimalgoritmo
