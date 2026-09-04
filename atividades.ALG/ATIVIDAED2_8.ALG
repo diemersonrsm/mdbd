@@ -13,7 +13,7 @@ inicio
       escreva("Digite o valor vendido pelo vendedor ", i, ": ")
       leia(venda)
 
-      // cálculo do bônus
+      // cÃ¡lculo do bÃ´nus
       se (venda >= 5000) entao
          bonus <- venda * 0.10
       senao
@@ -29,7 +29,7 @@ inicio
 
    fimpara
 
-   escreval("Total pago em bônus: ", totalBonus)
+   escreval("Total pago em bÃ´nus: ", totalBonus)
    escreval("Maior venda realizada: ", maiorVenda)
 
 fimalgoritmo
