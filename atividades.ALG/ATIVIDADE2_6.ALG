@@ -10,23 +10,23 @@ inicio
    soma <- 0
    contador <- 0
 
-   escreva("Digite números positivos (negativo para parar): ")
+   escreva("Digite nÃºmeros positivos (negativo para parar): ")
    leia(numero)
 
    enquanto (numero >= 0) faca
       soma <- soma + numero
       contador <- contador + 1
 
-      escreva("Digite outro número: ")
+      escreva("Digite outro nÃºmero: ")
       leia(numero)
    fimenquanto
 
    se (contador > 0) entao
       media <- soma / contador
-      escreva("Soma dos números positivos: ", soma,"---")
-      escreval("Média dos números positivos: ", media)
+      escreva("Soma dos nÃºmeros positivos: ", soma,"---")
+      escreval("MÃ©dia dos nÃºmeros positivos: ", media)
    senao
-      escreval("  Nenhum número positivo foi digitado.")
+      escreval("  Nenhum nÃºmero positivo foi digitado.")
    fimse
 
 fimalgoritmo
