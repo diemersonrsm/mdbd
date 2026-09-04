@@ -4,13 +4,13 @@ var
    parcelas, i: inteiro
 
 inicio
-   escreva("Digite o valor do empréstimo: ")
+   escreva("Digite o valor do emprÃ©stimo: ")
    leia(valor)
 
    escreva("Digite a taxa de juros mensal (%): ")
    leia(taxa)
 
-   escreva("Digite o número de parcelas: ")
+   escreva("Digite o nÃºmero de parcelas: ")
    leia(parcelas)
 
    taxa <- taxa / 100
