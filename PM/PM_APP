@@ -1,4 +1,4 @@
-import React , { useState }from 'react';
+import React, { useState } from 'react';
 import {
   StyleSheet,
   Text,
@@ -7,72 +7,70 @@ import {
   TouchableOpacity,
   Alert,
   TextInput,
-
 } from 'react-native';
 
-import { Card } from 'react-native-paper';
-
-
-import AssetExample from './components/AssetExample';
-
-
-
 export default function App() {
-   const [telaAtual, setTelaAtual] = useState('Home');
+  const [telaAtual, setTelaAtual] = useState('Home');
 
-    if (telaAtual === 'Home') {
-      return (
- 
-        <View style={styles.container}>
-          <Image
-            source={require('./assets/download.jpg')}
-            style={styles.logo}
-          />
-          <Text style={styles.titulo}>APP Scholar</Text>
-          <Text style={styles.subtitulo}>Sistema Acadêmico Mobile</Text>
-          <Text style={styles.titulo}>Painel do Banco</Text>
+  // Estado para armazenar o input do usuário
+  const [texto, setTexto] = useState('');
 
-          <TouchableOpacity
-            style={styles.botao}
-            onPress={() => setTelaAtual('cadastroalunos')}>
-            <Text style={styles.textoBotao}>Cadastrar Aluno</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={styles.botao}
-            onPress={() => setTelaAtual('cadastroProfessores')}>
-            <Text style={styles.textoBotao}>Cadastrar professores</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={styles.botao}
-            onPress={() => setTelaAtual('cadastroCoordenadores')}>
-            <Text style={styles.textoBotao}>cadastro coordenadores</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={styles.botao}
-            onPress={() => setTelaAtual('Sobre')}>
-            <Text style={styles.textoBotao}>sobre</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={styles.botao}
-            onPress={() => setTelaAtual('entrar')}>
-            <Text style={styles.textoBotao}>entrar</Text>
-          </TouchableOpacity>
-        </View>
-      );
+  // Função para lidar com o envio dos dados do input
+  const lidarComEnvio = () => {
+    if (texto.trim() === '') {
+      Alert.alert('Aviso', 'Por favor, digite o nome antes de salvar!');
+      return;
     }
- 
+    Alert.alert('Sucesso!', `Aluno gravado:\\\\\\\\n${texto}`);
+    setTexto(''); // Limpa o campo após salvar
+  };
 
-if (telaAtual === 'Sobre') {
+  if (telaAtual === 'Home') {
+    return (
+      <View style={styles.container}>
+        <Image source={require('./assets/download.jpg')} style={styles.logo} />
+        <Text style={styles.titulo}>APP Scholar</Text>
+        <Text style={styles.subtitulo}>Sistema Acadêmico Mobile</Text>
+        <Text style={styles.tituloSecundario}>Painel do Banco</Text>
+
+        <TouchableOpacity
+          style={styles.botao}
+          onPress={() => setTelaAtual('cadastroalunos')}>
+          <Text style={styles.textoBotao}>Cadastrar Aluno</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.botao}
+          onPress={() => setTelaAtual('cadastroProfessores')}>
+          <Text style={styles.textoBotao}>Cadastrar professores</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.botao}
+          onPress={() => setTelaAtual('cadastroCoordenadores')}>
+          <Text style={styles.textoBotao}>cadastro coordenadores</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.botao}
+          onPress={() => setTelaAtual('Sobre')}>
+          <Text style={styles.textoBotao}>sobre</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.botao}
+          onPress={() => setTelaAtual('entrar')}>
+          <Text style={styles.textoBotao}>entrar</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+
+  if (telaAtual === 'Sobre') {
     return (
       <View style={styles.container}>
         <Text style={styles.titulo}>Sobre o APP Scholar</Text>
-        <Text style={styles.caixa}>
-          place holder
-        </Text>
+        <Text style={styles.caixa}>place holder</Text>
         <TouchableOpacity
           style={styles.botaoVoltar}
           onPress={() => setTelaAtual('Home')}>
@@ -80,34 +78,55 @@ if (telaAtual === 'Sobre') {
         </TouchableOpacity>
       </View>
     );
- 
-}
+  }
 
-if (telaAtual === 'cadastroalunos') {
+  if (telaAtual === 'cadastroalunos') {
     return (
- 
       <View style={styles.container}>
-        <Text style={styles.titulo}>Cadastro</Text>
-        <Text style={styles.caixa}>
-          place holder
-        </Text>
-        <TouchableOpacity
-          style={styles.botaoVoltar}
-          onPress={() => setTelaAtual('Home')}>
-          <Text style={styles.textoBotao}>Voltar para o Início</Text>
-        </TouchableOpacity>
-      </View>
-    );
- 
-}
+        <Text style={styles.titulo}>Cadastro de Alunos</Text>
 
-if (telaAtual === 'cadastroProfessores') {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.titulo}>Cadastro</Text>
-        <Text style={styles.caixa}>
-          place holder
-        </Text>
+        {/* Campo de Input integrado aqui */}
+        <TextInput
+          style={styles.input}
+          placeholder="Digite o nome do aluno..."
+          placeholderTextColor="#999"
+          value1={texto}
+          onChangeText={(valor1) => setTexto(valor1)}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="digite as informações do aluno..."
+          placeholderTextColor="#999"
+          value2={texto}
+          onChangeText={(valor2) => setTexto(valor2)}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="digite a data de nacimento do aluno..."
+          placeholderTextColor="#999"
+          value3={Date}
+          onChangeText={(valor3) => setTexto(valor3)}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="digite a rua do aluno..."
+          placeholderTextColor="#999"
+          value4={texto}
+          onChangeText={(valor4) => setTexto(valor4)}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="digite o id do aluno..."
+          placeholderTextColor="#999"
+          value5={texto}
+          onChangeText={(valor5) => setTexto(valor5)}
+        />
+ 
+        {/* Botão de salvar integrado aqui */}
+        <TouchableOpacity style={styles.botaoSalvar} onPress={lidarComEnvio}>
+          <Text style={styles.textoBotao}>Salvar Aluno</Text>
+        </TouchableOpacity>
+
         <TouchableOpacity
           style={styles.botaoVoltar}
           onPress={() => setTelaAtual('Home')}>
@@ -115,15 +134,13 @@ if (telaAtual === 'cadastroProfessores') {
         </TouchableOpacity>
       </View>
     );
- 
-}
-if (telaAtual === 'cadastroCoordenadores') {
+  }
+
+  if (telaAtual === 'cadastroProfessores') {
     return (
       <View style={styles.container}>
-        <Text style={styles.titulo}>Cadastro</Text>
-        <Text style={styles.caixa}>
-          place holder
-        </Text>
+        <Text style={styles.titulo}>Cadastro Professores</Text>
+        <Text style={styles.caixa}>place holder</Text>
         <TouchableOpacity
           style={styles.botaoVoltar}
           onPress={() => setTelaAtual('Home')}>
@@ -131,15 +148,27 @@ if (telaAtual === 'cadastroCoordenadores') {
         </TouchableOpacity>
       </View>
     );
- 
-}
-if (telaAtual === 'entrar') {
+  }
+
+  if (telaAtual === 'cadastroCoordenadores') {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.titulo}>Cadastro Coordenadores</Text>
+        <Text style={styles.caixa}>place holder</Text>
+        <TouchableOpacity
+          style={styles.botaoVoltar}
+          onPress={() => setTelaAtual('Home')}>
+          <Text style={styles.textoBotao}>Voltar para o Início</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+
+  if (telaAtual === 'entrar') {
     return (
       <View style={styles.container}>
         <Text style={styles.titulo}>Entrar</Text>
-        <Text style={styles.caixa}>
-          place holder
-        </Text>
+        <Text style={styles.caixa}>place holder</Text>
         <TouchableOpacity
           style={styles.botaoVoltar}
           onPress={() => setTelaAtual('Home')}>
@@ -147,17 +176,19 @@ if (telaAtual === 'entrar') {
         </TouchableOpacity>
       </View>
     );
- 
-}
- 
- 
+  }
 }
 
 const styles = StyleSheet.create({
- 
- 
-    input: {
-    width: '85%',
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'black',
+    padding: 8,
+  },
+  input: {
+    width: '80%',
     backgroundColor: '#FFFFFF',
     padding: 15,
     borderRadius: 8,
@@ -167,7 +198,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   botaoSalvar: {
-    width: '85%',
+    width: '80%',
     backgroundColor: '#2ecc71',
     padding: 15,
     borderRadius: 10,
@@ -177,35 +208,24 @@ const styles = StyleSheet.create({
     borderColor: '#27ae60',
     elevation: 5,
   },
- 
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'black',
-    padding: 8,
-  },
-
   logo: {
     width: 150,
     height: 150,
     marginBottom: 20,
   },
-
   titulo: {
     fontSize: 32,
     fontWeight: 'bold',
     color: '#1565C0',
-    textshadowColor: '#000000',
-    shadowOffset: {
-      width: 5,
-      height: 3,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 4.65,
-    elevation: 8,
+    textAlign: 'center',
+    marginBottom: 10,
   },
-
+  tituloSecundario: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#1565C0',
+    marginBottom: 15,
+  },
   subtitulo: {
     fontSize: 18,
     marginBottom: 40,
@@ -220,50 +240,24 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderWidth: 3,
     borderColor: '#FF007F',
-
-    textshadowColor: '#000000',
-    shadowOffset: {
-      width: 5,
-      height: 3,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 4.65,
     elevation: 8,
   },
-   botaoVoltar: {
+  botaoVoltar: {
     width: '80%',
     backgroundColor: '#8F00FF',
     padding: 15,
     borderRadius: 10,
     marginTop: 30,
     alignItems: 'center',
-    borderWidth:"",
+    borderWidth: 1,
     borderColor: '#FF007F',
   },
-
   textoBotao: {
     fontSize: 18,
     fontWeight: 'bold',
     color: '#FFFFFF',
   },
-
-  shadowContainer: {
-    backgroundColor: 'white',
-    padding: 15,
-    borderRadius: 8,
-
-    shadowColor: 'white',
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-
-    shadowOpacity: 0.3,
-    shadowRadius: 4.65,
-
-    elevation: 8,
-  },
-   caixa: {
+  caixa: {
     width: '80%',
     backgroundColor: '#d3d3d3',
     padding: 15,
