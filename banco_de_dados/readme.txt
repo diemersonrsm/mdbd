@@ -1,0 +1,1 @@
+aqui você vera a programação do php do banco de dados, contando com javatambem, sendo parta a conexão do banco e do app em si
